@@ -1,0 +1,30 @@
+<div class="manage" ng-controller="manage">
+	<div class="release">
+		<span>案例列表</span>
+		<input type="button" value="发布" ng-click="odd()" />
+	</div>
+	<div id="content">
+		<div id="image-wrap" style="width: 14.9rem;height: 5rem;">
+			
+		</div>
+		<input type="button" value="添加案例" id="but" style="text-align: center;margin-top: 0.5rem;width: 14.9rem;height: 2.4rem;"/>
+		<input id="file" type="file" style="width: 14.9rem;margin-left: -1%;margin-top: -16%;"/>
+		<textarea id="result" rows=3 cols=3 style="display: none;"></textarea>
+	</div>
+
+	<div class="case releaseContent">
+		<p style="margin-top: 4rem;">已有案例</p>
+	</div>
+	<div class="chart">
+		<ul class="ul">
+			<li ng-repeat="time in arr"><img ng-src="{{time.img}}" /></li>
+		</ul>
+	</div>
+	<div class="footers">
+		<ul>
+			<li ui-sref="admin">新闻</li>
+			<li ui-sref="manage">案例</li>
+			<li ui-sref='words'>留言</li>
+		</ul>
+	</div>
+</div>
