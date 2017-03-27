@@ -22,6 +22,10 @@ angular.module('appApp', ['ui.router'])
 				url: '/liuyan',
 				templateUrl: 'views/liuyan.html'
 			})
+			.state('word', {
+				url: '/word',
+				templateUrl: 'views/word.html'
+			})
 			.state('login', {
 				url: '/login',
 				templateUrl: 'views/login.html'
