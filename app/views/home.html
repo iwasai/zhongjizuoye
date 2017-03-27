@@ -39,9 +39,9 @@
 		</ul>
 	</div>
 	<div class="sth-newsList" ng-repeat="d in quan">
-		<ul>
+		<ul ng-click="di($index)">
 			<li><img src="images/a (1).gif"></li>
-			<li>{{d.title}}</li>
+			<li style="font-size: 0.7rem;margin-left: 0.8rem;">{{d.title}}</li>
 			<p>{{d.time}}</p>
 		</ul>
 	</div>

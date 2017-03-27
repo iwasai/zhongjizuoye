@@ -19,16 +19,16 @@ angular.module('appApp')
 				$scope.dd = data.data;
 				for(var i = 0;i<$scope.dd.length;i++){
 					$scope.arr.push($scope.dd[i])
-				$scope.shanchu = function($index){
-					$http({
-						url:"http://47.88.16.225:406/news/?id="+$scope.arr[$index].id,
-						method:"delete"
-					}).then(function(data){
-						console.log(data)
-						$scope.data.splice($index,1)
-					})
-				
-				}
+					$scope.shanchu = function($index){
+						$http({
+							url:"http://47.88.16.225:406/users/?id="+$scope.arr[$index].id,
+							method:"delete"
+						}).then(function(data){
+							console.log(data)
+							$scope.arr.splice($index,1)
+						})
+					
+					}
 				
 				}
 			})
@@ -53,53 +53,26 @@ angular.module('appApp')
 				console.log(data)
 			})
 		}
-		$scope.aty = [];
+			$scope.aty = [];
 			$http({
 				url:"http://47.88.16.225:406/news",
 				method:"get",
 			}).then(function(data){
 				$scope.quan = data.data;
 				for(var i = 0;i<$scope.quan.length;i++){
-					$scope.aty.push($scope.quan[i])
+						$scope.aty.push($scope.quan[i])
+						$scope.shan = function($index){
+							$http({
+								url:"http://47.88.16.225:406/news/?id="+$scope.aty[$index].id,
+								method:"delete"
+							}).then(function(data){
+								console.log(data)
+								$scope.aty.splice($index,1)
+							})
+					
+						}
 				}
-				$scope.shan = function($index){
-					$http({
-						url:"http://47.88.16.225:406/news/?id="+$scope.aty[$index].id,
-						method:"delete"
-					}).then(function(data){
-						console.log(data)
-						$scope.data.splice($index,1)
-					})
 				
-				}
 			})
-		
+			
 	}])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

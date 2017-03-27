@@ -22,10 +22,6 @@ angular.module('appApp', ['ui.router'])
 				url: '/liuyan',
 				templateUrl: 'views/liuyan.html'
 			})
-			.state('word', {
-				url: '/word',
-				templateUrl: 'views/word.html'
-			})
 			.state('login', {
 				url: '/login',
 				templateUrl: 'views/login.html'
@@ -53,6 +49,10 @@ angular.module('appApp', ['ui.router'])
 			.state('aboutwe', {
 				url: '/aboutwe',
 				templateUrl: 'views/aboutwe.html'
+			})
+			.state('xiangqing', {
+				url: '/xiangqing',
+				templateUrl: 'views/xiangqing.html'
 			})
 		$urlRouterProvider.otherwise('/list')
 	}])
